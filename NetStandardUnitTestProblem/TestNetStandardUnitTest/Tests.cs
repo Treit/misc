@@ -1,7 +1,6 @@
-﻿namespace TestNetStandardUnitTest
+namespace TestNetStandardUnitTest
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using System.Configuration;
 
     [TestClass]
     public class Tests
