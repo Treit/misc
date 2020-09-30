@@ -1,0 +1,13 @@
+C:\src\git\Treit\misc\Learning\Problems\ReverseDigits\bin\Debug\netcoreapp3.1\ReverseDigits.exe
+C:\src\git\Treit\misc\Learning\Problems\ReverseDigits\bin\Debug\netcoreapp3.1\ReverseDigits.deps.json
+C:\src\git\Treit\misc\Learning\Problems\ReverseDigits\bin\Debug\netcoreapp3.1\ReverseDigits.runtimeconfig.json
+C:\src\git\Treit\misc\Learning\Problems\ReverseDigits\bin\Debug\netcoreapp3.1\ReverseDigits.runtimeconfig.dev.json
+C:\src\git\Treit\misc\Learning\Problems\ReverseDigits\bin\Debug\netcoreapp3.1\ReverseDigits.dll
+C:\src\git\Treit\misc\Learning\Problems\ReverseDigits\bin\Debug\netcoreapp3.1\ReverseDigits.pdb
+C:\src\git\Treit\misc\Learning\Problems\ReverseDigits\obj\Debug\netcoreapp3.1\ReverseDigits.csprojAssemblyReference.cache
+C:\src\git\Treit\misc\Learning\Problems\ReverseDigits\obj\Debug\netcoreapp3.1\ReverseDigits.AssemblyInfoInputs.cache
+C:\src\git\Treit\misc\Learning\Problems\ReverseDigits\obj\Debug\netcoreapp3.1\ReverseDigits.AssemblyInfo.cs
+C:\src\git\Treit\misc\Learning\Problems\ReverseDigits\obj\Debug\netcoreapp3.1\ReverseDigits.csproj.CoreCompileInputs.cache
+C:\src\git\Treit\misc\Learning\Problems\ReverseDigits\obj\Debug\netcoreapp3.1\ReverseDigits.dll
+C:\src\git\Treit\misc\Learning\Problems\ReverseDigits\obj\Debug\netcoreapp3.1\ReverseDigits.pdb
+C:\src\git\Treit\misc\Learning\Problems\ReverseDigits\obj\Debug\netcoreapp3.1\ReverseDigits.genruntimeconfig.cache

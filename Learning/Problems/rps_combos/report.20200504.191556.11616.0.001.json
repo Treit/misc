@@ -1,0 +1,863 @@
+
+{
+  "header": {
+    "reportVersion": 2,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200504.191556.11616.0.001.json",
+    "dumpEventTime": "2020-05-04T19:15:56Z",
+    "dumpEventTimeStamp": "1588644956461",
+    "processId": 11616,
+    "threadId": null,
+    "cwd": "C:\\src\\git\\Treit\\misc\\Learning\\Problems\\rps_combos",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      ".\\rps_combos.js",
+      "15"
+    ],
+    "nodejsVersion": "v12.16.3",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.16.3",
+      "v8": "7.8.279.23-node.35",
+      "uv": "1.34.2",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.16.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1g",
+      "cldr": "36.0",
+      "icu": "65.1",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.3/node-v12.16.3-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.3/node-v12.16.3.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.16.3/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.19619",
+    "osVersion": "Windows 10 Home",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 30015,
+        "nice": 0,
+        "sys": 34531,
+        "idle": 84800984,
+        "irq": 2718
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 17015,
+        "nice": 0,
+        "sys": 13687,
+        "idle": 84834828,
+        "irq": 984
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 32000,
+        "nice": 0,
+        "sys": 83062,
+        "idle": 84750468,
+        "irq": 6343
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 16046,
+        "nice": 0,
+        "sys": 261453,
+        "idle": 84587890,
+        "irq": 13109
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 29781,
+        "nice": 0,
+        "sys": 21484,
+        "idle": 84814125,
+        "irq": 1593
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 16562,
+        "nice": 0,
+        "sys": 10937,
+        "idle": 84837890,
+        "irq": 625
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 26718,
+        "nice": 0,
+        "sys": 18000,
+        "idle": 84820671,
+        "irq": 1453
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 15906,
+        "nice": 0,
+        "sys": 12015,
+        "idle": 84837468,
+        "irq": 656
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 31406,
+        "nice": 0,
+        "sys": 257921,
+        "idle": 84576062,
+        "irq": 9750
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 15187,
+        "nice": 0,
+        "sys": 49421,
+        "idle": 84800781,
+        "irq": 2015
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 23359,
+        "nice": 0,
+        "sys": 36468,
+        "idle": 84805562,
+        "irq": 2328
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 15890,
+        "nice": 0,
+        "sys": 106906,
+        "idle": 84742593,
+        "irq": 4312
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 22281,
+        "nice": 0,
+        "sys": 16281,
+        "idle": 84826828,
+        "irq": 1312
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 15890,
+        "nice": 0,
+        "sys": 9531,
+        "idle": 84839968,
+        "irq": 734
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 630703,
+        "nice": 0,
+        "sys": 604968,
+        "idle": 83629718,
+        "irq": 13578
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 348937,
+        "nice": 0,
+        "sys": 301390,
+        "idle": 84215062,
+        "irq": 6406
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 847765,
+        "nice": 0,
+        "sys": 408500,
+        "idle": 83609125,
+        "irq": 8359
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 330406,
+        "nice": 0,
+        "sys": 309281,
+        "idle": 84225703,
+        "irq": 6859
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 420156,
+        "nice": 0,
+        "sys": 373281,
+        "idle": 84071937,
+        "irq": 7359
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 334468,
+        "nice": 0,
+        "sys": 423078,
+        "idle": 84107828,
+        "irq": 13531
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 474171,
+        "nice": 0,
+        "sys": 415562,
+        "idle": 83975640,
+        "irq": 7328
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 317046,
+        "nice": 0,
+        "sys": 279187,
+        "idle": 84269140,
+        "irq": 5578
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 466890,
+        "nice": 0,
+        "sys": 358796,
+        "idle": 84039687,
+        "irq": 7343
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 332937,
+        "nice": 0,
+        "sys": 287218,
+        "idle": 84245218,
+        "irq": 6296
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 1132859,
+        "nice": 0,
+        "sys": 893796,
+        "idle": 82838718,
+        "irq": 4625
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 921593,
+        "nice": 0,
+        "sys": 742906,
+        "idle": 83200875,
+        "irq": 4093
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 159765,
+        "nice": 0,
+        "sys": 107546,
+        "idle": 84598062,
+        "irq": 2187
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 23125,
+        "nice": 0,
+        "sys": 35656,
+        "idle": 84806593,
+        "irq": 1234
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 1134812,
+        "nice": 0,
+        "sys": 884125,
+        "idle": 82846437,
+        "irq": 5000
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 958125,
+        "nice": 0,
+        "sys": 752484,
+        "idle": 83154765,
+        "irq": 4625
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 401687,
+        "nice": 0,
+        "sys": 401859,
+        "idle": 84061828,
+        "irq": 12125
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 360000,
+        "nice": 0,
+        "sys": 331156,
+        "idle": 84174218,
+        "irq": 6328
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 460656,
+        "nice": 0,
+        "sys": 476953,
+        "idle": 83927765,
+        "irq": 45468
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 331656,
+        "nice": 0,
+        "sys": 332859,
+        "idle": 84200859,
+        "irq": 30937
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 405796,
+        "nice": 0,
+        "sys": 729500,
+        "idle": 83730062,
+        "irq": 68593
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 297421,
+        "nice": 0,
+        "sys": 776171,
+        "idle": 83791765,
+        "irq": 307125
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 94578,
+        "nice": 0,
+        "sys": 52437,
+        "idle": 84718343,
+        "irq": 1875
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 19328,
+        "nice": 0,
+        "sys": 11390,
+        "idle": 84834640,
+        "irq": 671
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 68281,
+        "nice": 0,
+        "sys": 30000,
+        "idle": 84767078,
+        "irq": 1515
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 16234,
+        "nice": 0,
+        "sys": 12625,
+        "idle": 84836500,
+        "irq": 1000
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 54875,
+        "nice": 0,
+        "sys": 38906,
+        "idle": 84771578,
+        "irq": 4109
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 16578,
+        "nice": 0,
+        "sys": 13234,
+        "idle": 84835546,
+        "irq": 1421
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 49468,
+        "nice": 0,
+        "sys": 150125,
+        "idle": 84665765,
+        "irq": 42250
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 15890,
+        "nice": 0,
+        "sys": 163406,
+        "idle": 84686062,
+        "irq": 70515
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 44453,
+        "nice": 0,
+        "sys": 25171,
+        "idle": 84795734,
+        "irq": 1390
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 15046,
+        "nice": 0,
+        "sys": 10234,
+        "idle": 84840078,
+        "irq": 640
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 34765,
+        "nice": 0,
+        "sys": 22359,
+        "idle": 84808234,
+        "irq": 1375
+      },
+      {
+        "model": "AMD Ryzen Threadripper 3960X 24-Core Processor ",
+        "speed": 3793,
+        "user": 16156,
+        "nice": 0,
+        "sys": 12390,
+        "idle": 84836812,
+        "irq": 968
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "a8:5e:45:d0:72:2a",
+        "address": "2601:600:9b7f:bfd0::c51",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "a8:5e:45:d0:72:2a",
+        "address": "2601:600:9b7f:bfd0:40d2:c67:1734:df5d",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "a8:5e:45:d0:72:2a",
+        "address": "2601:600:9b7f:bfd0:e9b9:8987:3b2e:90e8",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "a8:5e:45:d0:72:2a",
+        "address": "fe80::40d2:c67:1734:df5d",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 14
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "a8:5e:45:d0:72:2a",
+        "address": "10.0.0.31",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "MSFTVPN",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "2001:4898:d8:79::c:a353",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "MSFTVPN",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "fe80::c:a353",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 24
+      },
+      {
+        "name": "MSFTVPN",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "100.64.111.228",
+        "netmask": "255.255.255.255",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "DESKTOP-N1DCA2E"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff675912449",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+11577"
+    },
+    {
+      "pc": "0x00007ff6759169a9",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+29337"
+    },
+    {
+      "pc": "0x00007ff675915828",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+24856"
+    },
+    {
+      "pc": "0x00007ff675a4d8c2",
+      "symbol": "v8::base::CPU::has_sse+68658"
+    },
+    {
+      "pc": "0x00007ff676269bbe",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff676251c91",
+      "symbol": "v8::SharedArrayBuffer::Externalize+833"
+    },
+    {
+      "pc": "0x00007ff67611e1ec",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff676129420",
+      "symbol": "v8::internal::Heap::ProtectUnprotectedMemoryChunks+1312"
+    },
+    {
+      "pc": "0x00007ff676125f44",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3204"
+    },
+    {
+      "pc": "0x00007ff67611b743",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff676119db4",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2452"
+    },
+    {
+      "pc": "0x00007ff67613afbd",
+      "symbol": "v8::internal::Factory::NewFillerObject+61"
+    },
+    {
+      "pc": "0x00007ff675ea1871",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+1665"
+    },
+    {
+      "pc": "0x00007ff6766b6c4d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+546637"
+    },
+    {
+      "pc": "0x00007ff6766b7b7d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+550525"
+    },
+    {
+      "pc": "0x000002ededb052b4",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2190974976,
+    "totalCommittedMemory": 2190974976,
+    "usedMemory": 2161189144,
+    "availableMemory": 33330384,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 32808,
+        "used": 32808,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 33554432,
+        "committedMemory": 33554432,
+        "capacity": 16759296,
+        "used": 7230424,
+        "available": 9528872
+      },
+      "old_space": {
+        "memorySize": 2156015616,
+        "committedMemory": 2156015616,
+        "capacity": 2153635880,
+        "used": 2153433984,
+        "available": 201896
+      },
+      "code_space": {
+        "memorySize": 430080,
+        "committedMemory": 430080,
+        "capacity": 157312,
+        "used": 157312,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 528384,
+        "committedMemory": 528384,
+        "capacity": 200720,
+        "used": 200720,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 135168,
+        "committedMemory": 135168,
+        "capacity": 131112,
+        "used": 131112,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 2784,
+        "used": 2784,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 16759296,
+        "used": 0,
+        "available": 16759296
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 27.89,
+    "kernelCpuSeconds": 0.64,
+    "cpuConsumptionPercent": 129.682,
+    "maxRss": 2267013120,
+    "pageFaults": {
+      "IORequired": 623171,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 2,
+      "writes": 8
+    }
+  },
+  "libuv": [
+  ],
+  "workers": [
+  ],
+  "environmentVariables": {
+    "=C:": "C:\\Windows\\System32",
+    "=ExitCode": "00000000",
+    "CommandPromptType": "Native",
+    "DevEnvDir": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\IDE\\",
+    "ExtensionSdkDir": "C:\\Program Files (x86)\\Microsoft SDKs\\Windows Kits\\10\\ExtensionSDKs",
+    "Framework40Version": "v4.0",
+    "FrameworkDir": "C:\\Windows\\Microsoft.NET\\Framework\\",
+    "FrameworkDir32": "C:\\Windows\\Microsoft.NET\\Framework\\",
+    "FrameworkVersion": "v4.0.30319",
+    "FrameworkVersion32": "v4.0.30319",
+    "FSHARPINSTALLDIR": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\IDE\\CommonExtensions\\Microsoft\\FSharp\\",
+    "INCLUDE": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\Tools\\MSVC\\14.26.28801\\ATLMFC\\include;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\Tools\\MSVC\\14.26.28801\\include;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\include\\um;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\winrt;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\cppwinrt",
+    "LIB": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\Tools\\MSVC\\14.26.28801\\ATLMFC\\lib\\x86;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\Tools\\MSVC\\14.26.28801\\lib\\x86;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\lib\\um\\x86;C:\\Program Files (x86)\\Windows Kits\\10\\lib\\10.0.18362.0\\ucrt\\x86;C:\\Program Files (x86)\\Windows Kits\\10\\lib\\10.0.18362.0\\um\\x86;",
+    "LIBPATH": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\Tools\\MSVC\\14.26.28801\\ATLMFC\\lib\\x86;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\Tools\\MSVC\\14.26.28801\\lib\\x86;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\Tools\\MSVC\\14.26.28801\\lib\\x86\\store\\references;C:\\Program Files (x86)\\Windows Kits\\10\\UnionMetadata\\10.0.18362.0;C:\\Program Files (x86)\\Windows Kits\\10\\References\\10.0.18362.0;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319;",
+    "NETFXSDKDir": "C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\",
+    "PROMPT": "$P$G",
+    "STARSHIP_SHELL": "powershell",
+    "UCRTVersion": "10.0.18362.0",
+    "UniversalCRTSdkDir": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+    "VCIDEInstallDir": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\IDE\\VC\\",
+    "VCINSTALLDIR": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\",
+    "VCToolsInstallDir": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\Tools\\MSVC\\14.26.28801\\",
+    "VCToolsRedistDir": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\Redist\\MSVC\\14.26.28720\\",
+    "VCToolsVersion": "14.26.28801",
+    "VisualStudioVersion": "16.0",
+    "VS160COMNTOOLS": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\Tools\\",
+    "VSCMD_ARG_app_plat": "Desktop",
+    "VSCMD_ARG_HOST_ARCH": "x86",
+    "VSCMD_ARG_TGT_ARCH": "x86",
+    "VSCMD_VER": "16.6.0-pre.5.0",
+    "VSINSTALLDIR": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\",
+    "WindowsLibPath": "C:\\Program Files (x86)\\Windows Kits\\10\\UnionMetadata\\10.0.18362.0;C:\\Program Files (x86)\\Windows Kits\\10\\References\\10.0.18362.0",
+    "WindowsSdkBinPath": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\",
+    "WindowsSdkDir": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+    "WindowsSDKLibVersion": "10.0.18362.0\\",
+    "WindowsSdkVerBinPath": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.18362.0\\",
+    "WindowsSDKVersion": "10.0.18362.0\\",
+    "WindowsSDK_ExecutablePath_x64": "C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\",
+    "WindowsSDK_ExecutablePath_x86": "C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\Admin\\AppData\\Roaming",
+    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+    "ChocolateyLastPathUpdate": "132330296064593150",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "DESKTOP-N1DCA2E",
+    "ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "envContainerTelemetryApiCmdLine": "-st \"C:\\Program Files\\NVIDIA Corporation\\NvContainer\\NvContainerTelemetryApi.dll\"",
+    "envContainerTelemetryApiCmdLineX86": "-st \"C:\\Program Files (x86)\\NVIDIA Corporation\\NvContainer\\NvContainerTelemetryApi.dll\"",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\Admin",
+    "LOCALAPPDATA": "C:\\Users\\Admin\\AppData\\Local",
+    "LOGONSERVER": "\\\\DESKTOP-N1DCA2E",
+    "NUMBER_OF_PROCESSORS": "48",
+    "OneDrive": "C:\\Users\\Admin\\OneDrive",
+    "OneDriveConsumer": "C:\\Users\\Admin\\OneDrive",
+    "OS": "Windows_NT",
+    "Path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\IDE\\\\Extensions\\Microsoft\\IntelliCode\\CLI;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\Tools\\MSVC\\14.26.28801\\bin\\HostX86\\x86;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\IDE\\VC\\VCPackages;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\MSBuild\\Current\\bin\\Roslyn;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Team Tools\\Performance Tools;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\IDE\\CommonExtensions\\Microsoft\\FSharp\\;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.18362.0\\x86;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\x86;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\\\MSBuild\\Current\\Bin;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\IDE\\;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\Tools\\;C:\\Python38\\Scripts\\;C:\\Python38\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Admin\\.cargo\\bin;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\.dotnet\\tools;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "AMD64 Family 23 Model 49 Stepping 0, AuthenticAMD",
+    "PROCESSOR_LEVEL": "23",
+    "PROCESSOR_REVISION": "3100",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PSModulePath": "C:\\Users\\Admin\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\PowerShell\\Modules\\",
+    "PUBLIC": "C:\\Users\\Public",
+    "SESSIONNAME": "Console",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\Admin\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\Admin\\AppData\\Local\\Temp",
+    "USERDOMAIN": "DESKTOP-N1DCA2E",
+    "USERDOMAIN_ROAMINGPROFILE": "DESKTOP-N1DCA2E",
+    "USERNAME": "Admin",
+    "USERPROFILE": "C:\\Users\\Admin",
+    "windir": "C:\\WINDOWS",
+    "WSLENV": "WT_SESSION::WT_PROFILE_ID",
+    "WT_PROFILE_ID": "{e095db50-532a-403f-bc7a-a72efb775203}",
+    "WT_SESSION": "3a2806b5-dd54-4300-b1ae-ce88fc7ec3dc",
+    "__DOTNET_ADD_32BIT": "1",
+    "__DOTNET_PREFERRED_BITNESS": "32",
+    "__VSCMD_PREINIT_PATH": "C:\\Python38\\Scripts\\;C:\\Python38\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Admin\\.cargo\\bin;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\.dotnet\\tools",
+    "__VSCMD_script_err_count": "0"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\powrprof.dll",
+    "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll"
+  ]
+}

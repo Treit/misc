@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ReverseDigits": {
+      "commandName": "Project",
+      "commandLineArgs": "1234"
+    }
+  }
+}
