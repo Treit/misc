@@ -50,6 +50,7 @@
                     int valB = int.Parse(valTokens[1]);
                     char requiredChar = tokens[1][0];
                     string password = tokens[2];
+
                     result += valA + valB + requiredChar + password.Length;
                 }
             }
