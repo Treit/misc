@@ -17,7 +17,7 @@
         [GlobalSetup]
         public void GlobalSetup()
         {
-            var inputFile = @"C:\src\github\Treit\misc\StringParsingBenchmark\input.txt";
+            var inputFile = @"./input.txt";
             _lines = File.ReadAllLines(inputFile);
         }
 
