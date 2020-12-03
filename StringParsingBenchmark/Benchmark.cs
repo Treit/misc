@@ -41,8 +41,6 @@
             {
                 result = 0;
 
-                var sw = Stopwatch.StartNew();
-
                 foreach (var line in lines)
                 {
                     string[] tokens = line.Split(' ');
@@ -66,7 +64,6 @@
             for (int i = 0; i < this.Iterations; i++)
             {
                 result = 0;
-                var sw = Stopwatch.StartNew();
 
                 foreach (var line in lines)
                 {
