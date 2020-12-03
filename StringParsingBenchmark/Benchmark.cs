@@ -72,7 +72,7 @@
                     int loc = span.IndexOf(' ');
                     ReadOnlySpan<char> password = span.Slice(loc + 4);
                     ReadOnlySpan<char> countRange = span.Slice(0, loc);
-                    char requiredChar = span.Slice(loc + 1, 1)[0];
+                    char requiredChar = span[loc + 1];
                     loc = countRange.IndexOf('-');
                     ReadOnlySpan<char> valAStr = countRange.Slice(0, loc);
                     ReadOnlySpan<char> valBStr = countRange.Slice(loc + 1);
