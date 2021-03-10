@@ -78,6 +78,5 @@
         {
             Console.WriteLine(string.Join(',', arr));
         }
-
     }
 }
