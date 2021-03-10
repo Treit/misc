@@ -36,7 +36,6 @@
 
             Random r = new Random();
 
-            // Initial shuffle
             for (int i = 0; i < arr.Length - 2; i++)
             {
                 RandomSwap(arr, i, r, indexMap);
