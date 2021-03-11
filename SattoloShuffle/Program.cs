@@ -13,19 +13,7 @@
             {
                 PrintArray(numbers);
                 WeirdShuffle(numbers);
-                CheckResults(numbers);
                 PrintArray(numbers);
-            }
-        }
-
-        private static void CheckResults(int[] a)
-        {
-            for (int i = 1; i <= a.Length; i++)
-            {
-                if (a[i - 1] == i)
-                {
-                    Console.WriteLine($"FAIL {i}");
-                }
             }
         }
 
@@ -51,9 +39,9 @@
 
             Random r = new Random();
 
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < arr.Length - 2; i++)
             {
-                RandomSwap(arr, i, r, indexMap);
+                Swap(arr, i, r);
             }
         }
 
@@ -68,6 +56,14 @@
             }
 
             return true;
+        }
+
+        private static void Swap<T>(T[] arr, int x, Random r)
+        {
+            var y = r.Next(x + 1, arr.Length);
+            var tmp = arr[x];
+            arr[x] = arr[y];
+            arr[y] = tmp;
         }
 
         private static void RandomSwap<T>(T[] arr, int x, Random r, Dictionary<T, int> indexMap)
