@@ -1,7 +1,6 @@
 ﻿namespace Test
 {
     using System;
-    using System.Collections.Generic;
 
     class Program
     {
@@ -12,29 +11,35 @@
             while (true)
             {
                 PrintArray(numbers);
-                WeirdShuffle(numbers);
+                SattoloShuffle(numbers);
+                if (!Validate(numbers))
+                {
+                    break;
+                }
                 PrintArray(numbers);
             }
         }
 
-        private static void WeirdShuffle<T>(T[] arr)
+        private static bool Validate(int[] arr)
+        {
+            for (int i = 1; i <= arr.Length; i++)
+            {
+                if (arr[i - 1] == i)
+                {
+                    Console.WriteLine($"Fail: {i}");
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private static void SattoloShuffle<T>(T[] arr)
             where T : struct
         {
             if (arr.Length == 0)
             {
                 return;
-            }
-
-            if (!AllUnique(arr))
-            {
-                throw new ArgumentException("All values must be unique.", nameof(arr));
-            }
-
-            var indexMap = new Dictionary<T, int>(arr.Length);
-
-            for (int i = 0; i < arr.Length; i++)
-            {
-                indexMap.Add(arr[i], i);
             }
 
             Random r = new Random();
@@ -45,44 +50,12 @@
             }
         }
 
-        private static bool AllUnique<T>(T[] a)
-            where T : struct
-        {
-            var check = new HashSet<T>(a);
-
-            if (check.Count != a.Length)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
         private static void Swap<T>(T[] arr, int x, Random r)
         {
             var y = r.Next(x + 1, arr.Length);
             var tmp = arr[x];
             arr[x] = arr[y];
             arr[y] = tmp;
-        }
-
-        private static void RandomSwap<T>(T[] arr, int x, Random r, Dictionary<T, int> indexMap)
-        {
-            while (true)
-            {
-                var y = r.Next(x, arr.Length);
-
-                if (indexMap[arr[x]] == y)
-                {
-                    // Can't put it back to the original index!
-                    continue;
-                }
-
-                var tmp = arr[x];
-                arr[x] = arr[y];
-                arr[y] = tmp;
-                break;
-            }
         }
 
         private static void PrintArray<T>(T[] arr)
