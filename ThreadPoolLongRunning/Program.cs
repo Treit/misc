@@ -9,89 +9,73 @@ namespace ThreadPoolLongRunning
     class Program
     {
         private static int Running;
+        private static ManualResetEventSlim mre = new();
+        private const int Iterations = 100;
 
         static void Main(string[] args)
         {
-            Test1();
-            Test2();
+            long Test1Time = Test(TaskCreationOptions.None);
+            long Test2Time = Test(TaskCreationOptions.LongRunning);
+
+            Console.WriteLine($"It took {Test1Time} ms. to get all of the tasks running WITHOUT LongRunning.");
+            Console.WriteLine($"It took {Test2Time} ms. to get all of the tasks running WITH LongRunning.");
+
+            GC.Collect(2, GCCollectionMode.Forced);
+
+            Console.WriteLine($"Total threads: {Process.GetCurrentProcess().Threads.Count}");
+            Console.WriteLine($"Running thread pool threads: {GetRunningThreadPoolThreads()}");
+
+            Console.WriteLine("All done.");
+            Console.WriteLine("Press <Enter> to exit.");
+            Console.ReadKey();
         }
 
-        static void Test1()
+        static long Test(TaskCreationOptions options)
         {
+            mre.Reset();
+            Running = 0;
+
             Stopwatch sw = Stopwatch.StartNew();
 
-            List<Task> tasks = new(100);
+            List<Task> tasks = new(Iterations);
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < Iterations; i++)
             {
                 Task t = Task.Factory.StartNew(() =>
                 {
                     Interlocked.Increment(ref Running);
-                    if (Running >= 100)
-                    {
-                        return;
-                    }
 
-                    while (true)
+                    while (!mre.IsSet)
                     {
+                        if (Running >= Iterations)
+                        {
+                            mre.Set();
+                            return;
+                        }
+
                         Thread.Sleep(TimeSpan.FromSeconds(5));
                     }
-                }, TaskCreationOptions.None);
+                }, options);
 
                 tasks.Add(t);
             }
 
-            while (true)
+            while (!mre.IsSet)
             {
                 Thread.Sleep(500);
-                if (Running >= 100)
-                {
-                    Console.WriteLine($"It took {sw.ElapsedMilliseconds} ms. to get all of the tasks running WITHOUT LongRunning.");
-                    Running = 0;
-                    return;
-                }
-                Console.WriteLine($"Running total threads: {Process.GetCurrentProcess().Threads.Count}");
+                Console.WriteLine($"Total threads: {Process.GetCurrentProcess().Threads.Count}");
                 Console.WriteLine($"Running thread pool threads: {GetRunningThreadPoolThreads()}");
-            }
-        }
 
-        static void Test2()
-        {
-            Stopwatch sw = Stopwatch.StartNew();
-
-            List<Task> tasks = new(100);
-
-            for (int i = 0; i < 100; i++)
-            {
-                Task t = Task.Factory.StartNew(() =>
+                foreach (var task in tasks)
                 {
-                    Interlocked.Increment(ref Running);
-                    if (Running >= 100)
+                    if (!task.IsCompleted)
                     {
-                        return;
+                        continue;
                     }
-
-                    while (true)
-                    {
-                        Thread.Sleep(TimeSpan.FromSeconds(5));
-                    }
-                }, TaskCreationOptions.LongRunning);
-
-                tasks.Add(t);
-            }
-
-            while (true)
-            {
-                Thread.Sleep(500);
-                if (Running >= 100)
-                {
-                    Running = 0;
-                    Console.WriteLine($"It took {sw.ElapsedMilliseconds} ms. to get all of the tasks running WITH LongRunning.");
-                    return;
                 }
-                Console.WriteLine($"Running total threads: {Process.GetCurrentProcess().Threads.Count}");
-                Console.WriteLine($"Running thread pool threads: {GetRunningThreadPoolThreads()}");
             }
+
+            return sw.ElapsedMilliseconds;
         }
 
         /// <summary>
