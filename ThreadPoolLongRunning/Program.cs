@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace ThreadPoolLongRunning
 {
+    class Foo
+    {
+        public Foo(string val)
+        {
+            Val = val;
+        }
+
+        public string Val { get; set; }
+    }
+
     class Program
     {
         private static int Running;
@@ -32,6 +42,19 @@ namespace ThreadPoolLongRunning
 
         static long Test(TaskCreationOptions options)
         {
+            List<Foo> l = new List<Foo>();
+            l.Add(new Foo("A"));
+            l.Add(new Foo("B"));
+            l.Add(new Foo("C"));
+            l.Add(new Foo("D"));
+            l.Add(new Foo("E"));
+
+            for (int i = l.Count - 1; i >= 0; i--)
+            {
+                Console.WriteLine(l[i].Val);
+            }
+
+
             mre.Reset();
             Running = 0;
 

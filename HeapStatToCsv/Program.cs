@@ -19,7 +19,7 @@ namespace HeapStatToCsv
 
             string filepath = args[0];
 
-            if (!int.TryParse(args[1], out int threshold))
+            if (!long.TryParse(args[1], out long threshold))
             {
                 Console.WriteLine("The threshold value was not a valid integer.");
                 return;
@@ -28,7 +28,7 @@ namespace HeapStatToCsv
             ProcessHeapStatFile(filepath, threshold);
         }
 
-        private static void ProcessHeapStatFile(string filepath, int threshold)
+        private static void ProcessHeapStatFile(string filepath, long threshold)
         {
             using var sr = new StreamReader(filepath);
             string line;
@@ -57,15 +57,20 @@ namespace HeapStatToCsv
                     break;
                 }
 
-                if (int.TryParse(m.Result("$2"), out int count))
+                string mt = m.Result("$1");
+                string count = m.Result("$2");
+                string sizeStr = m.Result("$3");
+                string typeName = m.Result("$4").Replace(",", ".");
+
+                if (long.TryParse(sizeStr, out long size))
                 {
-                    if (count < threshold)
+                    if (size < threshold)
                     {
                         continue;
                     }
                 }
 
-                Console.WriteLine($"{m.Result("$1")},{m.Result("$2")},{m.Result("$3")},{m.Result("$4")}");
+                Console.WriteLine($"{mt},{count},{sizeStr},{typeName}");
             }
         }
 

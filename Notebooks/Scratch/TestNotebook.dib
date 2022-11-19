@@ -1,0 +1,14 @@
+#!csharp
+
+int i = 1234;
+
+#!javascript
+
+let x = 0
+interactive.csharp.getVariable('i').then(v => console.log(v))
+console.log(x)
+
+#!markdown
+
+<h1>Test!</h1>
+Test test test

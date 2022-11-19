@@ -13,6 +13,9 @@ static T ParseInvariant<T>(string s)
     return T.Parse(s, CultureInfo.InvariantCulture);
 }
 
+string s = "\0\0\0";
+Console.WriteLine(s.Length);
+
 Console.Write("First number: ");
 var left = ParseInvariant<float>(Console.ReadLine());
 
