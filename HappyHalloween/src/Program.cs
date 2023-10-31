@@ -1,9 +1,6 @@
 ﻿namespace TerminalStress
 {
     using System;
-    using System.Diagnostics;
-    using System.Drawing;
-    using System.IO;
     using System.Text;
     using System.Threading;
 
@@ -20,26 +17,6 @@
             Console.OutputEncoding = Encoding.UTF8;
             Console.Title = "👻 HAPPY HALLOWEEN! 🎃";
             Console.Clear();
-            string s = string.Empty;
-
-            var colors = new ConsoleColor[]
-            {
-                ConsoleColor.Black,
-                ConsoleColor.Red,
-                ConsoleColor.Green,
-                ConsoleColor.Blue,
-                ConsoleColor.Cyan,
-                ConsoleColor.Magenta,
-                ConsoleColor.Yellow,
-                ConsoleColor.White,
-                ConsoleColor.DarkYellow,
-                ConsoleColor.DarkCyan,
-                ConsoleColor.DarkBlue,
-                ConsoleColor.DarkGray,
-                ConsoleColor.DarkGreen,
-                ConsoleColor.DarkMagenta,
-                ConsoleColor.DarkRed
-            };
 
             while (true)
             {
@@ -48,28 +25,24 @@
                     Console.SetCursorPosition(r.Next(Console.WindowWidth), r.Next(Console.WindowHeight));
                     if (r.Next(0, 100) > 50)
                     {
-                        Console.Write("👻");
+                        Console.Write(s_alphabet[0]);
                         Thread.Sleep(10);
                     }
                     else
                     {
-                        Console.Write("🎃");
+                        Console.Write(s_alphabet[1]);
                     }
                 }
                 catch
                 {
-                    Console.Write("🎃");
+                    Console.Write("😨");
                 }
 
                 try
                 {
-                    var color = colors[r.Next(colors.Length)];
-                    Console.ForegroundColor = color;
                     int n = r.Next(0, s_alphabet.Length);
-
                     var c = s_alphabet[n];
                     Console.Write(c);
-                    s += c;
                 }
                 catch
                 {
