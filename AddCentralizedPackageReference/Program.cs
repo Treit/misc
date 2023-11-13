@@ -10,9 +10,10 @@ The program does the following:
 3. Finds all csproj files in the current directory and subdirectories and if there is an existing PackageReference
 entry for that package, and if VersionOverride is not specified, updates the entry for that package.
 */
+using AddCentralizedPackageReference;
 using System.Text.RegularExpressions;
 
-if (args.Length < 2)
+if (args.Length < 1)
 {
     PrintUsage();
     return;
@@ -25,7 +26,15 @@ if (!File.Exists("Packages.props"))
 }
 
 var packageName = args[0];
-var packageVersion = args[1];
+var packageVersion = args.Length > 1 ? args[1] : (await NuGetPackageQuery.GetLatestVersion(packageName))?.Version;
+
+if (packageVersion is null)
+{
+    Console.WriteLine($"Could not determine the latest package version for the package '{packageName}'.");
+    return;
+}
+
+Console.WriteLine($"Using package '{packageName}' with version '{packageVersion}.");
 
 try
 {
@@ -99,6 +108,7 @@ static void UpdatePackagesPropsFile(string propsFile, string packageName, string
     }
 
     File.Copy(tmpFile, propsFile, overwrite: true);
+    File.Delete(tmpFile);
 }
 
 static void UpdateCsprojFile(string csprojFile, string packageName)
@@ -140,7 +150,7 @@ static void PrintUsage()
 {
     var programName = AppDomain.CurrentDomain.FriendlyName;
     Console.WriteLine("Usage:");
-    Console.WriteLine($"{programName} <PackageName> <PackageVersion>");
+    Console.WriteLine($"{programName} <PackageName> [<PackageVersion>]");
     Console.WriteLine();
     Console.WriteLine("Example:");
     Console.WriteLine($"{programName} 'System.Text.Json' '7.0.3'");
