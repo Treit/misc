@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FilesToCopy Include="RawXML\**\*.*" />
+  </ItemGroup>
+
+  <Target Name="CopyFiles" AfterTargets="Build">
+    <Message Text="In CopyFiles!" />
+    <Copy SourceFiles="@(FilesToCopy)" DestinationFolder="$(TargetDir)\RawXML\%(RecursiveDir)" />
+  </Target>
+
+</Project>
