@@ -4,8 +4,8 @@
     {
         private static readonly Dictionary<string, int> dict = new Dictionary<string, int>
         {
-            {"intlv3_pokï¿½mon", 1216},
-            {"intlv3_pokï¿½mon", 1248}
+            {"intlv3_pokã©mon", 1216},
+            {"intlv3_pokémon", 1248}
         };
 
         static void Main(string[] args)
