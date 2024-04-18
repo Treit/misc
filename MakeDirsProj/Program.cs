@@ -1,6 +1,25 @@
 ﻿using System.Text.RegularExpressions;
 
 var pattern = args is ["--dirs", ..] ? @"dirs\.proj$" : @".+\.csproj$|dirs\.proj$";
+var glob = "*.*";
+
+for (int i = 0; i < args.Length; i++)
+{
+    var arg = args[i];
+
+    if (arg.StartsWith("--glob"))
+    {
+        if (i + 1 >= args.Length)
+        {
+            Console.WriteLine("Misisng glob pattern.");
+            return;
+        }
+
+        glob = args[i + 1];
+        break;
+    }
+}
+
 var targetFile = "dirs.proj";
 
 if (File.Exists(targetFile))
@@ -9,7 +28,7 @@ if (File.Exists(targetFile))
 }
 
 var files =
-    Directory.EnumerateFiles(".", "*.*", new EnumerationOptions { RecurseSubdirectories = true })
+    Directory.EnumerateFiles(".", glob, new EnumerationOptions { RecurseSubdirectories = true })
     .Where(f => Regex.IsMatch(f, pattern));
 
 using var sw = new StreamWriter(targetFile);
