@@ -1,0 +1,21 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestService", "TestService.csproj", "{C9EA4A50-E06D-4E4B-AFAF-D14EECFD0562}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9EA4A50-E06D-4E4B-AFAF-D14EECFD0562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9EA4A50-E06D-4E4B-AFAF-D14EECFD0562}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9EA4A50-E06D-4E4B-AFAF-D14EECFD0562}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9EA4A50-E06D-4E4B-AFAF-D14EECFD0562}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB5E9E86-E90E-4075-9CEB-F93C94F63417}
+	EndGlobalSection
+EndGlobal

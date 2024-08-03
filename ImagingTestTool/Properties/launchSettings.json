@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ImagingTestTool": {
+      "commandName": "Project",
+      "commandLineArgs": "https://treit.github.io/images/bdn1.jpg c:\\temp\\out.jpg 100 100",
+      "nativeDebugging": true
+    }
+  }
+}

@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.Threading.Tasks;
 
 namespace Test
 {
@@ -7,7 +9,14 @@ namespace Test
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            try
+            {
+                CreateHostBuilder(args).Build().Run();
+            }
+            catch (TaskCanceledException)
+            {
+                Console.WriteLine("Task cancelled.");
+            }
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

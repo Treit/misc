@@ -33,8 +33,19 @@ namespace Test
     {
         static void Main()
         {
-            var test = new ReflectionTest();
-            test.DoTest();
+            var stuff = new string[] { "a", "b", "c", "d", "e" };
+            var x = stuff switch
+            {
+                [_, "b", .., var result] => result.ToUpper(),
+                _ => ""
+            };
+
+            Console.WriteLine(x);
+        }
+
+        private static IEnumerable<string[]> ReadRecords()
+        {
+            yield return new string[] { "a", "DEPOSIT", "b", "100" };
         }
     }
 }

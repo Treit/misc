@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net70</TargetFramework>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AssemblyTitle>TaskDemo</AssemblyTitle>
+    <Product>TaskDemo</Product>
+    <NoWarn>CS8981,CA1416</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Threading" Version="15.8.132" />
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="15.8.132" />
+    <PackageReference Include="Microsoft.VisualStudio.Validation" Version="15.3.15" />
+    <PackageReference Include="Nito.AsyncEx.Coordination" Version="5.0.0-pre-05" />
+    <PackageReference Include="Nito.AsyncEx.Tasks" Version="5.0.0-pre-05" />
+    <PackageReference Include="Nito.Collections.Deque" Version="1.0.4" />
+    <PackageReference Include="Nito.Disposables" Version="1.2.3" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.4.0" />
+    <PackageReference Include="System.Runtime.Caching" Version="7.0.0" />
+  </ItemGroup>
+</Project>

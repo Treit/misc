@@ -1,0 +1,21 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnumCheckForNegative", "EnumCheckForNegative.csproj", "{07F035C3-123C-45C7-9318-4C2EDF8D835D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07F035C3-123C-45C7-9318-4C2EDF8D835D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07F035C3-123C-45C7-9318-4C2EDF8D835D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07F035C3-123C-45C7-9318-4C2EDF8D835D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07F035C3-123C-45C7-9318-4C2EDF8D835D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF17B5F3-DDFA-4BA9-A2E1-8B7F5DE69C44}
+	EndGlobalSection
+EndGlobal

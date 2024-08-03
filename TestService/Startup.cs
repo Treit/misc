@@ -1,14 +1,74 @@
+using Benchmark;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using System;
+using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Test
 {
+    public class BackGroundWorker : BackgroundService
+    {
+        ILogger _logger;
+        public BackGroundWorker(ILogger<BackGroundWorker> logger)
+        {
+            _logger = logger;
+        }
+
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            while (!stoppingToken.IsCancellationRequested)
+            {
+                Console.WriteLine(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"));
+                _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                try
+                {
+                    await Task.Delay(TimeSpan.FromSeconds(30), stoppingToken);
+                }
+                catch (TaskCanceledException)
+                {
+                    Console.WriteLine("Task cancelled.");
+                }
+            }
+
+            Console.WriteLine("Cancellation requested.");
+        }
+    }
+
+    public class LifetimeMonitor : BackgroundService
+    {
+        ILogger _logger;
+        IHostApplicationLifetime _lifetime;
+
+        public LifetimeMonitor(ILogger<LifetimeMonitor> logger, IHostApplicationLifetime lifetime)
+        {
+            _logger = logger;
+            _lifetime = lifetime;
+        }
+
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            while (true && !stoppingToken.IsCancellationRequested)
+            {
+                if (File.Exists(@"C:\temp\STOP"))
+                {
+                    _lifetime.StopApplication();
+                }
+
+                await Task.Delay(TimeSpan.FromSeconds(1));
+            }
+        }
+    }
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -22,6 +82,10 @@ namespace Test
         {
             ServicePointManager.DefaultConnectionLimit = 100;
 
+            services.AddDbContextFactory<AdventureWorks2019Context>(options =>
+            {
+                options.UseSqlServer("Server=.; Integrated Security=sspi; Initial Catalog=AdventureWorks2019;Encrypt=false");
+            });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -29,6 +93,9 @@ namespace Test
             });
 
             AddHttpClients(services);
+            services.AddSingleton(services);
+            services.AddHostedService<BackGroundWorker>();
+            services.AddHostedService<LifetimeMonitor>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment _)

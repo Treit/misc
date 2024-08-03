@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -6,7 +7,7 @@ namespace Test
 {
     class ThreadSafetyDemo
     {
-        static readonly Dictionary<int, int> _dict = new();
+        static readonly ConcurrentDictionary<int, int> _dict = new();
 
         static void Main()
         {

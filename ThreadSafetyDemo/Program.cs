@@ -18,7 +18,7 @@ namespace Test
                 {
                     int r = _random.Next(1000);
 
-                    if (iters++ % 2000 != 0)
+                    if (iters++ % 2000 == 0)
                     {
                         Console.Write($"{r} ");
                         Thread.Sleep(50);

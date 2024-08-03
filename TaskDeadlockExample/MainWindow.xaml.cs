@@ -11,16 +11,6 @@ namespace TaskDeadlockExample
             InitializeComponent();
         }
 
-        void SyncOverAsyncClick(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(AsyncTest.DoSomethingAsync().Result);
-        }
-
-        void ConfigureAwaitClick(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(AsyncTest.DoSomethingConfigureAwaitAsync().Result);
-        }
-
         void SyncClick(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(AsyncTest.DoSomething());
@@ -29,6 +19,16 @@ namespace TaskDeadlockExample
         async void AsyncClick(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(await AsyncTest.DoSomethingAsync());
+        }
+
+        void SyncOverAsyncClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(AsyncTest.DoSomethingAsync().Result);
+        }
+
+        void ConfigureAwaitClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(AsyncTest.DoSomethingConfigureAwaitAsync().Result);
         }
     }
 

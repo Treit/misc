@@ -17,7 +17,7 @@ namespace Test
             {
                 var task = Task.Run(() =>
                 {
-                    _totalProcessed++;
+                    Interlocked.Increment(ref _totalProcessed);
                 });
 
                 tasks[i] = task;

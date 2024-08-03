@@ -23,8 +23,8 @@ public sealed class Logging
     public LogLevelSetting LogLevel { get; init; } = null!;
 }
 
-public class LogLevelSetting
+public sealed class LogLevelSetting
 {
-    public string Default { get; init; } = null!;
-    public string Microsoft { get; init; } = null!;
+    public required string Default { get; set; }
+    public required string Microsoft { get; set; }
 }
